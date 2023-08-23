@@ -1,5 +1,6 @@
 import { Facebook, Instagram, MailOutlineOutlined, Phone, Pinterest, Room, Twitter } from '@mui/icons-material'
 
+import { Link } from 'react-router-dom'
 import React from 'react'
 import {mobile} from "../responsive"
 import styled from 'styled-components'
@@ -52,6 +53,7 @@ const List = styled.ul`
    margin: 0;
    list-style: none;
    display: flex;
+   flex-direction: column;
    flex-wrap: wrap;
 `
 const ListItem = styled.li`
@@ -80,7 +82,7 @@ const Footer = () => {
     <Container>
         <Left>
             <Logo>Ecomm.</Logo>
-            <Desc>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</Desc>
+            <Desc>Discover the latest fashion trends at our online women's clothing store. We offer a curated selection of stylish and affordable clothing, ensuring you stay in vogue without breaking the bank. Elevate your wardrobe with our collection of on-trend and budget-friendly options.</Desc>
             <SocialContainer>
                 <SocialIcon color="3B5999">
                     <Facebook />
@@ -103,15 +105,11 @@ const Footer = () => {
         <Center>
             <Title>Useful Links</Title>
             <List>
-                <ListItem>Home</ListItem>
-                <ListItem>Cart</ListItem>
-                <ListItem>Man Fashion</ListItem>
-                <ListItem>Woman Fashion</ListItem>
-                <ListItem>Accessories</ListItem>
-                <ListItem>My Account</ListItem>
-                <ListItem>Order Tracking</ListItem>
-                <ListItem>Wishlist</ListItem>
-                <ListItem>Terms</ListItem>
+                <ListItem><Link style={{textDecoration: "none",color: "inherit"}} to={'/'}> Home </Link></ListItem>
+                <ListItem><Link style={{textDecoration: "none",color: "inherit"}} to={'/cart'}> Cart </Link></ListItem>
+                <ListItem><Link style={{textDecoration: "none",color: "inherit"}} to={'/login'}> Login </Link></ListItem>
+                <ListItem><Link style={{textDecoration: "none",color: "inherit"}} to={'/register'}> Register </Link></ListItem>
+              
             </List>
         </Center>
 
