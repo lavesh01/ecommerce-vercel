@@ -63,7 +63,7 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     
-    axios.post("/api/auth/register", {
+    axios.post("/auth/register", {
       username, email, password
     }).then((res) => {
       console.log(res.data);

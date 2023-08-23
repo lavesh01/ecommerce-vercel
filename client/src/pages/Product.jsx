@@ -127,7 +127,7 @@ const Product = () => {
     useEffect(() => {
         const getProduct = async () => {
             try{
-                const res = await axios.get(`/api/products/find/${id}`);
+                const res = await axios.get(`/products/find/${id}`);
                 setProduct(res.data);
                 setColor(res.data.color[0]);
                 setSize(res.data.size[0]);
